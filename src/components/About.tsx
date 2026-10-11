@@ -7,9 +7,9 @@ export function About() {
       <div className="grid gap-8 md:grid-cols-[1fr_280px] md:items-start">
         <div className="space-y-4 text-[17px] leading-relaxed text-body">
           <p>
-            I fell in love with programming during my Information Systems and Technologies studies at the Faculty of
-            Organizational Sciences, University of Belgrade. I built Shopify stores as a freelancer while still
-            studying, joined COI Agency in 2022 and became development lead in 2023.
+            I got hooked on programming as a student of Information Systems and Technologies at the Faculty of
+            Organizational Sciences in Belgrade. I was building Shopify stores as a freelancer while still studying,
+            joined COI Agency in 2022 and became development lead in 2023.
           </p>
           <p>
             Today I lead a team of up to nine developers: I interview and onboard people, run technical demos with

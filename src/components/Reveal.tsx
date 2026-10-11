@@ -8,20 +8,25 @@ export function Reveal({ children, delay = 0, className = "" }: { children: Reac
 
   useEffect(() => {
     const el = ref.current;
-    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92) return; // already on screen: no hide/show dance
     setShown(false);
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShown(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin: "0px 0px -8% 0px" },
-    );
+    let done = false;
+    const show = () => {
+      if (done) return;
+      done = true;
+      setShown(true);
+      io.disconnect();
+      window.clearTimeout(timer);
+    };
+    const io = new IntersectionObserver(([entry]) => entry.isIntersecting && show(), { rootMargin: "0px 0px -8% 0px" });
     io.observe(el);
-    return () => io.disconnect();
+    const timer = window.setTimeout(show, 4000); // never leave content hidden
+    return () => {
+      io.disconnect();
+      window.clearTimeout(timer);
+    };
   }, []);
 
   return (

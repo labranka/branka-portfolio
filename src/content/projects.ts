@@ -22,19 +22,6 @@ const coi = "Built at COI Agency with the team.";
 
 export const projects: Project[] = [
   {
-    slug: "lunara",
-    title: "Lunara",
-    kind: "AI web app, built solo",
-    role: "Designed, built and run end to end",
-    year: "2026",
-    summary:
-      "Personalised AI content and a streaming chat with memory on the OpenAI API, subscriptions and one-off purchases via Gumroad webhooks, guest checkout with tokenised email delivery, Supabase with row-level security, i18n in 9 locales.",
-    stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Supabase", "OpenAI API", "Gumroad", "Vercel"],
-    url: "https://lunaraguide.com/?lang=en",
-    repo: "https://github.com/labranka/lunara",
-    image: "/work/lunara.jpg",
-  },
-  {
     // 1,534 commits (31% of the repo)
     slug: "wall-of-art",
     title: "Wall of Art",
@@ -130,14 +117,14 @@ export const projects: Project[] = [
   {
     slug: "vibe-search",
     title: "VIBE Search",
-    kind: "AI product search app for Shopify",
+    kind: "AI product search app for Shopify · in progress",
     role: "Owned the full frontend; accountable for quality and delivery",
-    year: "2025",
+    year: "2025 to present",
     summary:
       "Merchant admin for search settings, merchandising rules, analytics and A/B tests, plus the storefront search widget as a Theme App Extension. Delegated tasks and integrated the backend developer's API.",
     stack: ["React", "TypeScript", "Remix", "Shopify Polaris", "App Bridge", "Theme App Extension", "Vitest", "Playwright"],
     art: "search",
-    credit: `${coi} In development.`,
+    credit: `${coi} In progress, not yet published.`,
   },
   {
     // project-set-up-template: 60 of 75 commits
@@ -163,5 +150,18 @@ export const projects: Project[] = [
     stack: ["GitHub Actions", "Anthropic API", "Node.js", "Cursor rules", "Claude Code", "Codex"],
     art: "pipeline",
     credit: "Internal tooling at COI Agency.",
+  },
+  {
+    slug: "lunara",
+    title: "Lunara",
+    kind: "AI web app, built solo",
+    role: "Designed, built and run end to end",
+    year: "2026",
+    summary:
+      "Personalised AI content and a streaming chat with memory on the OpenAI API, subscriptions and one-off purchases via Gumroad webhooks, guest checkout with tokenised email delivery, Supabase with row-level security, i18n in 9 locales.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Supabase", "OpenAI API", "Gumroad", "Vercel"],
+    url: "https://lunaraguide.com/?lang=en",
+    repo: "https://github.com/labranka/lunara",
+    image: "/work/lunara.jpg",
   },
 ];

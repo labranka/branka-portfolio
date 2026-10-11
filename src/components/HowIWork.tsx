@@ -2,8 +2,8 @@ import { SectionTitle } from "./SectionTitle";
 
 const pillars = [
   {
-    title: "Storefronts",
-    text: "Custom Shopify themes from scratch to supplied designs. Vanilla JavaScript and Web Components where a framework would be overhead, performance budgets, accessibility, Lighthouse in CI.",
+    title: "Storefronts and web apps",
+    text: "Custom storefronts from scratch to supplied designs, and products in Next.js and React. Vanilla JavaScript and Web Components where a framework would be overhead, performance budgets, accessibility, Lighthouse in CI.",
     tone: "mark-sky",
   },
   {

@@ -9,7 +9,7 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrai
 export const metadata: Metadata = {
   title: "Branka Lakićević · Senior Frontend Engineer",
   description:
-    "Senior frontend engineer and development lead. Custom Shopify storefronts, the apps behind them, React and TypeScript products, and AI-assisted engineering.",
+    "Senior frontend engineer and development lead. Storefronts, web apps, React and TypeScript products, and AI-assisted engineering.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

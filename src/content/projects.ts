@@ -13,7 +13,10 @@ export type Project = {
   hidden?: boolean;
 };
 
-// Edit this file to add, reorder or hide projects. Images live in public/work/<slug>.png (1600x1000).
+// Edit this file to add, reorder or hide projects (hidden: true). Images live in public/work/<slug>.jpg (1600x1000).
+// Commit counts in comments are Branka's commits on the default branch per GitHub (checked 2026-10-11); a lower bound.
+const coi = "Built at COI Agency with the team.";
+
 export const projects: Project[] = [
   {
     slug: "lunara",
@@ -26,43 +29,74 @@ export const projects: Project[] = [
     stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Supabase", "OpenAI API", "Gumroad", "Vercel"],
     url: "https://lunaraguide.com/?lang=en",
     repo: "https://github.com/labranka/lunara",
-    image: "/work/lunara.png",
+    image: "/work/lunara.jpg",
   },
   {
+    // 1,534 commits (31% of the repo)
+    slug: "wall-of-art",
+    title: "Wall of Art",
+    kind: "Shopify storefront",
+    role: "Lead developer; built most of the storefront",
+    year: "2024 to 2025",
+    summary:
+      "Poster and frame matching with availability checks and grouped cart items, saved favourites and recently viewed products, built to supplied designs.",
+    stack: ["Shopify", "Liquid", "JavaScript", "Web Components", "Ajax Cart API"],
+    url: "https://wallofart.se",
+    image: "/work/wall-of-art.jpg",
+    credit: coi,
+  },
+  {
+    // 791 commits theme + photo platform
     slug: "printworks",
     title: "PRINTWORKS",
     kind: "Shopify theme and photo-printing platform",
     role: "Lead developer, theme and apps",
-    year: "2024",
+    year: "2024 to 2025",
     summary:
       "Complete Shopify theme built from scratch to supplied designs, then a photo-printing platform: in-browser photo editor, order webhooks, BullMQ/Redis background processing, Sharp image pipeline and automated print-lab handoff.",
     stack: ["Shopify", "Liquid", "Web Components", "Fabric.js", "Node.js", "BullMQ", "Redis", "Sharp"],
     url: "https://printworksmarket.com",
-    credit: "Built at COI Agency with the team; design supplied by the client.",
+    image: "/work/printworks.jpg",
+    credit: `${coi} Design supplied by the client.`,
   },
   {
+    // 606 commits
+    slug: "aarke",
+    title: "Aarke",
+    kind: "Shopify Plus storefront",
+    role: "Developer on the storefront team",
+    year: "2023",
+    summary: "Multi-market storefront for a premium Swedish kitchen brand, built to supplied designs. TODO: add one or two specifics.",
+    stack: ["Shopify Plus", "Liquid", "JavaScript", "Web Components"],
+    url: "https://aarke.com",
+    image: "/work/aarke.jpg",
+    credit: coi,
+  },
+  {
+    // 668 commits
     slug: "cdlp",
     title: "CDLP",
     kind: "Shopify Plus storefront",
     role: "Lead developer",
-    year: "2023",
+    year: "2023 to 2024",
     summary:
       "Custom theme to supplied designs: subscription purchases, dynamic collection filtering with the Section Rendering API, keyboard-accessible filters with browser history support.",
     stack: ["Shopify Plus", "Liquid", "JavaScript", "Web Components", "Section Rendering API"],
     url: "https://cdlp.com",
-    credit: "Built at COI Agency with the team.",
+    credit: coi,
   },
   {
-    slug: "wall-of-art",
-    title: "Wall of Art",
+    // 676 commits (35% of the repo)
+    slug: "bast",
+    title: "Bast Sauna",
     kind: "Shopify storefront",
     role: "Lead developer",
-    year: "2024",
-    summary:
-      "Poster and frame matching with availability checks and grouped cart items, saved favourites and recently viewed products.",
-    stack: ["Shopify", "Liquid", "JavaScript", "Web Components", "Ajax Cart API"],
-    url: "https://wallofart.se",
-    credit: "Built at COI Agency with the team.",
+    year: "2025 to 2026",
+    summary: "Custom Shopify storefront built to supplied designs. TODO: add one or two specifics.",
+    stack: ["Shopify", "Liquid", "JavaScript", "Web Components"],
+    url: "https://bastsauna.com",
+    image: "/work/bast.jpg",
+    credit: coi,
   },
   {
     slug: "ivon",
@@ -74,7 +108,8 @@ export const projects: Project[] = [
       "B2C/B2B storefront with backorder dates and Shopify Customer Accounts; backorder app with idempotent webhooks, a database outbox and reconciliation; a Preact admin extension for ERP invoice data; isolated QA environment and Docker/Coolify releases with 200+ automated tests.",
     stack: ["Liquid", "TypeScript", "React Router 7", "Preact", "Prisma", "PostgreSQL", "Docker", "Klaviyo"],
     url: "https://ivon.se",
-    credit: "Built at COI Agency with the team.",
+    image: "/work/ivon.jpg",
+    credit: coi,
   },
   {
     slug: "vibe-search",
@@ -85,7 +120,19 @@ export const projects: Project[] = [
     summary:
       "Merchant admin for search settings, merchandising rules, analytics and A/B tests, plus the storefront search widget as a Theme App Extension. Delegated tasks and integrated the backend developer's API.",
     stack: ["React", "TypeScript", "Remix", "Shopify Polaris", "App Bridge", "Theme App Extension", "Vitest", "Playwright"],
-    credit: "Built at COI Agency with the team. In development.",
+    credit: `${coi} In development.`,
+  },
+  {
+    // project-set-up-template: 60 of 75 commits
+    slug: "coi-theme-starter",
+    title: "COI theme starter",
+    kind: "Agency starter theme and architecture",
+    role: "Authored most of the current template",
+    year: "2026",
+    summary:
+      "The skeleton every new store starts from: Shopify Online Store 2.0, ES modules with an importmap, Custom Elements, per-section script loading, standardised drawer and slider patterns, no bundler. Paired with coding rules that the AI review pipeline enforces.",
+    stack: ["Shopify", "Liquid", "ES modules", "Custom Elements", "ESLint", "Prettier"],
+    credit: "Internal tooling at COI Agency.",
   },
   {
     slug: "ai-review-pipeline",
@@ -98,4 +145,10 @@ export const projects: Project[] = [
     stack: ["GitHub Actions", "Anthropic API", "Node.js", "Cursor rules", "Claude Code", "Codex"],
     credit: "Internal tooling at COI Agency.",
   },
+  // Hidden by default; set hidden: false to show. Commits: skinome 725, Water & Wines 468, bbhugme 373, REF 203, Muri 58 (74%).
+  { slug: "skinome", title: "Skinome", kind: "Shopify storefront", role: "Developer", year: "2023 to 2024", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://www.skinome.com/", image: "/work/skinome.jpg", credit: coi, hidden: true },
+  { slug: "water-wines", title: "Water & Wines", kind: "Shopify storefront", role: "Developer", year: "2024", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://www.waterandwines.com/", image: "/work/water-wines.jpg", credit: coi, hidden: true },
+  { slug: "bbhugme", title: "bbhugme", kind: "Shopify storefront", role: "Developer", year: "2025", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://www.bbhugme.com/", image: "/work/bbhugme.jpg", credit: coi, hidden: true },
+  { slug: "ref-stockholm", title: "REF Stockholm", kind: "Shopify storefront", role: "Developer", year: "2025", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://www.refstockholm.com/", image: "/work/ref-stockholm.jpg", credit: coi, hidden: true },
+  { slug: "muri", title: "Muri", kind: "Shopify storefront", role: "Developer", year: "2025", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://muri-drinks.com", credit: coi, hidden: true },
 ];

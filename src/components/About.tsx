@@ -9,7 +9,7 @@ export function About() {
           <p>
             I got hooked on programming as a student of Information Systems and Technologies at the Faculty of
             Organizational Sciences in Belgrade. I was building Shopify stores as a freelancer while still studying,
-            joined COI Agency in 2022 and became development lead in 2023.
+            joined <a href="https://coiagency.com" target="_blank" rel="noopener noreferrer" className="font-medium text-ink underline decoration-plum/60 underline-offset-4 hover:decoration-plum">COI Agency</a> in 2022 and became development lead in 2023.
           </p>
           <p>
             Today I lead a team of up to nine developers: I interview and onboard people, run technical demos with

@@ -7,7 +7,7 @@ export function MoreWork() {
     <section id="more" className="mx-auto max-w-6xl px-5 py-16">
       <SectionTitle eyebrow="More" title="More stores I have worked on" />
       <p className="-mt-4 mb-8 max-w-2xl text-[15px] text-muted">
-        All built at COI Agency with the team, to supplied designs. Storefront development on each; the share varies from a few features to most of the theme.
+        All built at <a href="https://coiagency.com" target="_blank" rel="noopener noreferrer" className="text-plum underline-offset-4 hover:underline">COI Agency</a> with the team, to supplied designs. Storefront development on each; the share varies from a few features to most of the theme.
       </p>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         {moreWork.map((p, i) => (

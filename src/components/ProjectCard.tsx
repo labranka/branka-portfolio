@@ -57,7 +57,20 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
                 )}
               </p>
             )}
-            {project.credit && <p className="text-[12px] text-muted">{project.credit}</p>}
+            {project.credit && (
+              <p className="text-[12px] text-muted">
+                {project.credit.split("COI Agency").map((part, i, arr) => (
+                  <span key={i}>
+                    {part}
+                    {i < arr.length - 1 && (
+                      <a href="https://coiagency.com" target="_blank" rel="noopener noreferrer" className="text-plum underline-offset-4 hover:underline">
+                        COI Agency
+                      </a>
+                    )}
+                  </span>
+                ))}
+              </p>
+            )}
           </div>
         </article>
       </Tilt>

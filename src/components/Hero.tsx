@@ -18,7 +18,8 @@ export function Hero() {
       </svg>
 
       <p className="fade-up delay-1 mx-auto mt-6 max-w-2xl text-lg text-body">
-        Development lead at COI Agency, a Shopify Plus agency in Zagreb, where a team of up to nine of us ships
+        Development lead at{" "}
+        <a href="https://coiagency.com" target="_blank" rel="noopener noreferrer" className="font-medium text-ink underline decoration-plum/60 underline-offset-4 hover:decoration-plum">COI Agency</a>, a Shopify Plus agency in Zagreb, where a team of up to nine of us ships
         20+ custom stores and apps a year. On the side I build my own products with Next.js, React, TypeScript
         and the OpenAI API.
       </p>

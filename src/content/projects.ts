@@ -59,7 +59,7 @@ export const projects: Project[] = [
       "In-browser photo upload and editing (Fabric.js, Uppy, HEIC conversion), order webhooks with signature checks, BullMQ/Redis workers with retries, Sharp image pipeline for print ratios, automated handoff to the print lab via Google Drive and daily production CSVs.",
     stack: ["Node.js", "Express", "BullMQ", "Redis", "Sharp", "Fabric.js", "Uppy", "Admin GraphQL", "Google Drive API"],
     url: "https://printworksmarket.com/products/frame-book-black?view=photo-printer",
-    image: "/work/printworks-platform.jpg",
+    art: "printing",
     credit: coi,
   },
   {

@@ -18,7 +18,7 @@ export function About() {
           </p>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/portrait.jpg" alt="Branka Lakićević" className="w-full rounded-2xl border border-rule object-cover" />
+        <img src="/portrait.jpg" alt="Branka Lakićević" className="w-full border border-rule object-cover" />
       </div>
     </section>
   );

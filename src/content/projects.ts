@@ -1,3 +1,5 @@
+import type { Art } from "@/components/Cover";
+
 export type Project = {
   slug: string;
   title: string;
@@ -9,6 +11,7 @@ export type Project = {
   url?: string;
   repo?: string;
   image?: string;
+  art?: Art;
   credit?: string;
   hidden?: boolean;
 };
@@ -46,18 +49,30 @@ export const projects: Project[] = [
     credit: coi,
   },
   {
-    // 791 commits theme + photo platform
+    // 791 commits on the theme repo, plus the photo-printer service
     slug: "printworks",
     title: "PRINTWORKS",
-    kind: "Shopify theme and photo-printing platform",
-    role: "Lead developer, theme and apps",
+    kind: "Shopify storefront",
+    role: "Lead developer; theme built from scratch",
     year: "2024 to 2025",
     summary:
-      "Complete Shopify theme built from scratch to supplied designs, then a photo-printing platform: in-browser photo editor, order webhooks, BullMQ/Redis background processing, Sharp image pipeline and automated print-lab handoff.",
-    stack: ["Shopify", "Liquid", "Web Components", "Fabric.js", "Node.js", "BullMQ", "Redis", "Sharp"],
+      "Complete Shopify theme built from scratch to supplied designs for a photo-printing brand: product configurators that feed the printing platform, performance-first vanilla JavaScript, Lighthouse CI.",
+    stack: ["Shopify", "Liquid", "JavaScript", "Web Components", "Lighthouse CI"],
     url: "https://printworksmarket.com",
     image: "/work/printworks.jpg",
     credit: `${coi} Design supplied by the client.`,
+  },
+  {
+    slug: "printworks-platform",
+    title: "PRINTWORKS photo-printing platform",
+    kind: "Apps and backend behind the store",
+    role: "Lead developer",
+    year: "2024 to 2025",
+    summary:
+      "In-browser photo upload and editing (Fabric.js, Uppy, HEIC conversion), order webhooks with signature checks, BullMQ/Redis workers with retries, Sharp image pipeline for print ratios, automated handoff to the print lab via Google Drive and daily production CSVs.",
+    stack: ["Node.js", "Express", "BullMQ", "Redis", "Sharp", "Fabric.js", "Uppy", "Admin GraphQL", "Google Drive API"],
+    art: "printing",
+    credit: coi,
   },
   {
     // 606 commits
@@ -83,6 +98,7 @@ export const projects: Project[] = [
       "Custom theme to supplied designs: subscription purchases, dynamic collection filtering with the Section Rendering API, keyboard-accessible filters with browser history support.",
     stack: ["Shopify Plus", "Liquid", "JavaScript", "Web Components", "Section Rendering API"],
     url: "https://cdlp.com",
+    image: "/work/cdlp.jpg",
     credit: coi,
   },
   {
@@ -120,6 +136,7 @@ export const projects: Project[] = [
     summary:
       "Merchant admin for search settings, merchandising rules, analytics and A/B tests, plus the storefront search widget as a Theme App Extension. Delegated tasks and integrated the backend developer's API.",
     stack: ["React", "TypeScript", "Remix", "Shopify Polaris", "App Bridge", "Theme App Extension", "Vitest", "Playwright"],
+    art: "search",
     credit: `${coi} In development.`,
   },
   {
@@ -132,6 +149,7 @@ export const projects: Project[] = [
     summary:
       "The skeleton every new store starts from: Shopify Online Store 2.0, ES modules with an importmap, Custom Elements, per-section script loading, standardised drawer and slider patterns, no bundler. Paired with coding rules that the AI review pipeline enforces.",
     stack: ["Shopify", "Liquid", "ES modules", "Custom Elements", "ESLint", "Prettier"],
+    art: "starter",
     credit: "Internal tooling at COI Agency.",
   },
   {
@@ -143,12 +161,7 @@ export const projects: Project[] = [
     summary:
       "Every pull request gets static checks and a Claude-based review on GitHub Actions; findings are validated against the source before they are posted, so hallucinated comments never reach the PR. Shared coding standards for agents, plus Claude Code and Codex for implementation and review.",
     stack: ["GitHub Actions", "Anthropic API", "Node.js", "Cursor rules", "Claude Code", "Codex"],
+    art: "pipeline",
     credit: "Internal tooling at COI Agency.",
   },
-  // Hidden by default; set hidden: false to show. Commits: skinome 725, Water & Wines 468, bbhugme 373, REF 203, Muri 58 (74%).
-  { slug: "skinome", title: "Skinome", kind: "Shopify storefront", role: "Developer", year: "2023 to 2024", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://www.skinome.com/", image: "/work/skinome.jpg", credit: coi, hidden: true },
-  { slug: "water-wines", title: "Water & Wines", kind: "Shopify storefront", role: "Developer", year: "2024", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://www.waterandwines.com/", image: "/work/water-wines.jpg", credit: coi, hidden: true },
-  { slug: "bbhugme", title: "bbhugme", kind: "Shopify storefront", role: "Developer", year: "2025", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://www.bbhugme.com/", image: "/work/bbhugme.jpg", credit: coi, hidden: true },
-  { slug: "ref-stockholm", title: "REF Stockholm", kind: "Shopify storefront", role: "Developer", year: "2025", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://www.refstockholm.com/", image: "/work/ref-stockholm.jpg", credit: coi, hidden: true },
-  { slug: "muri", title: "Muri", kind: "Shopify storefront", role: "Developer", year: "2025", summary: "Custom Shopify storefront built to supplied designs.", stack: ["Shopify", "Liquid", "JavaScript"], url: "https://muri-drinks.com", credit: coi, hidden: true },
 ];

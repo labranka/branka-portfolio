@@ -3,12 +3,12 @@ import { SectionTitle } from "./SectionTitle";
 const pillars = [
   {
     title: "Storefronts and web apps",
-    text: "Custom storefronts from scratch to supplied designs, and products in Next.js and React. Vanilla JavaScript and Web Components where a framework would be overhead, performance budgets, accessibility, Lighthouse in CI.",
+    text: "Custom storefronts from scratch to supplied designs, multi-market and multi-language, and products in Next.js and React. Vanilla JavaScript and Web Components where a framework would be overhead, performance budgets (LCP, CLS), accessibility, Lighthouse in CI.",
     tone: "mark-sky",
   },
   {
     title: "Apps and integrations",
-    text: "The code behind the store: backorder and B2B flows, admin extensions, webhooks, queues, ERP and email integrations. Idempotent by default, with tests that run in CI.",
+    text: "Custom Shopify apps built for what a client actually needs: backorder and B2B flows, bookings and vouchers, bundles and subscriptions, admin, checkout and theme app extensions. Integrations with ERP and invoicing (Fortnox), email and CRM (Klaviyo, Resend), payments (Qliro, Gumroad), search (HelloRetail) and analytics (GTM, PostHog). Webhooks, queues and background jobs, idempotent by default, with tests that run in CI.",
     tone: "mark-sage",
   },
   {

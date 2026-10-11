@@ -20,7 +20,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         <article className="group flex h-full flex-col overflow-hidden border border-rule bg-card">
           <div className="relative aspect-[16/10] overflow-hidden border-b border-rule bg-hl-plum">
             {href ? (
-              <a href={href} data-cursor="View" aria-label={`Open ${project.title}`} className="block h-full w-full">
+              <a href={href} target="_blank" rel="noopener noreferrer" data-cursor="View" aria-label={`Open ${project.title}`} className="block h-full w-full">
                 {media}
               </a>
             ) : (
@@ -45,13 +45,13 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             {(project.url || project.repo) && (
               <p className="pt-2 font-mono text-[12px]">
                 {project.url && (
-                  <a href={project.url} className="text-plum underline-offset-4 hover:underline">
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-plum underline-offset-4 hover:underline">
                     Live site
                   </a>
                 )}
                 {project.url && project.repo && <span className="text-muted"> · </span>}
                 {project.repo && (
-                  <a href={project.repo} className="text-plum underline-offset-4 hover:underline">
+                  <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-plum underline-offset-4 hover:underline">
                     Source
                   </a>
                 )}

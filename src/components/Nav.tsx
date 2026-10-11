@@ -16,7 +16,7 @@ export function Nav() {
         </Link>
         <nav className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[12px] uppercase tracking-[0.12em] text-muted">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="transition hover:text-ink">
+            <a key={l.href} href={l.href} className="transition hover:text-ink" {...(l.href.startsWith("/") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
               {l.label}
             </a>
           ))}

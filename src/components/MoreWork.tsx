@@ -12,7 +12,7 @@ export function MoreWork() {
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         {moreWork.map((p, i) => (
           <Reveal key={p.slug} delay={Math.min(i * 40, 280)}>
-            <a href={p.url} data-cursor="Open" className="group block border border-rule bg-card transition-transform duration-200 hover:-translate-y-1">
+            <a href={p.url} target="_blank" rel="noopener noreferrer" data-cursor="Open" className="group block border border-rule bg-card transition-transform duration-200 hover:-translate-y-1">
               <div className="aspect-[16/10] overflow-hidden border-b border-rule bg-hl-plum">
                 {p.image ? (
                   // eslint-disable-next-line @next/next/no-img-element

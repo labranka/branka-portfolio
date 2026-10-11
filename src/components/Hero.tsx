@@ -30,10 +30,10 @@ export function Hero() {
         <a href="mailto:brankarbc96@gmail.com" className="border border-rule px-5 py-2.5 text-ink transition hover:border-plum">
           Email me
         </a>
-        <a href="https://github.com/labranka" className="border border-rule px-5 py-2.5 text-ink transition hover:border-plum">
+        <a href="https://github.com/labranka" target="_blank" rel="noopener noreferrer" className="border border-rule px-5 py-2.5 text-ink transition hover:border-plum">
           GitHub
         </a>
-        <a href="https://www.linkedin.com/in/brankalakicevic" className="border border-rule px-5 py-2.5 text-ink transition hover:border-plum">
+        <a href="https://www.linkedin.com/in/brankalakicevic" target="_blank" rel="noopener noreferrer" className="border border-rule px-5 py-2.5 text-ink transition hover:border-plum">
           LinkedIn
         </a>
       </div>

@@ -15,7 +15,7 @@ export const moreWork: MoreItem[] = [
   { slug: "happy-ears", title: "Happy Ears", year: "2026", url: "https://happyearsearplugs.com/sv-se", image: "/work/happy-ears.jpg" }, // 276 commits
   { slug: "elvine", title: "Elvine", year: "2024", url: "https://www.elvineclothing.com/", image: "/work/elvine.jpg" }, // 247 commits
   { slug: "ref-stockholm", title: "REF Stockholm", year: "2025", url: "https://www.refstockholm.com/", image: "/work/ref-stockholm.jpg" }, // 203 commits
-  { slug: "almada-label", title: "Almada Label", year: "2026", url: "https://almadalabel.com", image: undefined }, // 180 commits
+  { slug: "almada-label", title: "Almada Label", year: "2026", url: "https://almadalabel.com", image: "/work/almada-label.jpg" }, // 180 commits
   { slug: "andy-okay", title: "Andy Okay", year: "2026", url: "https://andyokay.com", image: "/work/andy-okay.jpg" }, // 120 commits
   { slug: "massproductions", title: "Massproductions", year: "2025", url: "https://www.massproductions.se/", image: "/work/massproductions.jpg" }, // 108 commits
   { slug: "switch-nails", title: "Switch Nails", year: "2025", url: "https://switch-nails.com", image: "/work/switch-nails.jpg" }, // 87 commits

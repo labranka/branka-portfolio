@@ -1,32 +1,21 @@
 import { SectionTitle } from "./SectionTitle";
 
-const pillars = [
-  {
-    title: "Storefronts and web apps",
-    text: "Custom storefronts from scratch to supplied designs, multi-market and multi-language, and products in Next.js and React. Vanilla JavaScript and Web Components where a framework would be overhead, performance budgets (LCP, CLS), accessibility, Lighthouse in CI.",
-    tone: "mark-sky",
-  },
-  {
-    title: "Apps and integrations",
-    text: "Custom Shopify apps built for what a client actually needs: backorder and B2B flows, bookings and vouchers, bundles and subscriptions, admin, checkout and theme app extensions. Integrations with ERP and invoicing (Fortnox), email and CRM (Klaviyo, Resend), payments (Qliro, Gumroad), search (HelloRetail) and analytics (GTM, PostHog). Webhooks, queues and background jobs, idempotent by default, with tests that run in CI.",
-    tone: "mark-sage",
-  },
-  {
-    title: "AI-assisted engineering",
-    text: "Coding standards for agents, an automated AI code review on every pull request, Claude Code and Codex for implementation and review. A dependable part of the workflow, not a novelty.",
-    tone: "mark-sun",
-  },
+const principles = [
+  { title: "Choose the right foundations", text: "Custom storefronts in Liquid and Web Components. Applications in React and Next.js. I choose the approach around the product, with performance and accessibility built into the work.", tone: "mark-sky" },
+  { title: "Build beyond the interface", text: "I connect storefronts to the systems behind them: custom Shopify apps, ERP data, payments, search and email. Webhooks, queues and background jobs get the same attention as the frontend.", tone: "mark-sage" },
+  { title: "Make quality a team habit", text: "I stay hands-on while leading developers, onboarding people and setting shared standards. Tests in CI and AI-assisted reviews support the work, with review findings checked against the source.", tone: "mark-sun" },
 ];
 
 export function HowIWork() {
   return (
-    <section id="how" className="mx-auto max-w-6xl px-5 py-16">
-      <SectionTitle eyebrow="How I work" title="Three things I know about" />
-      <div className="grid gap-5 md:grid-cols-3">
-        {pillars.map((p) => (
-          <div key={p.title} className="border border-rule bg-card p-6">
-            <span className={`hl hl-static ${p.tone} font-display text-2xl`}>{p.title}</span>
-            <p className="mt-4 text-[15px] leading-relaxed text-body">{p.text}</p>
+    <section id="how" className="section-shell">
+      <SectionTitle eyebrow="My approach" title="Build thoughtfully. Ship together." />
+      <div className="mt-10 grid gap-8 md:grid-cols-3">
+        {principles.map((item, index) => (
+          <div key={item.title} className="border-t border-rule pt-6">
+            <span className={"hl " + item.tone + " font-mono text-xs"}>0{index + 1}</span>
+            <h3 className="mt-5 font-display text-2xl leading-tight text-ink">{item.title}</h3>
+            <p className="mt-4 text-[15px] leading-relaxed text-body">{item.text}</p>
           </div>
         ))}
       </div>

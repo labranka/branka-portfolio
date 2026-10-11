@@ -177,7 +177,7 @@ export const projects: Project[] = [
     role: "Introduced and maintain across the team",
     year: "2026",
     summary:
-      "Every pull request gets static checks and a Claude-based review on GitHub Actions; findings are validated against the source before they are posted, so hallucinated comments never reach the PR. Shared coding standards for agents, plus Claude Code and Codex for implementation and review.",
+      "Every pull request gets static checks and a Claude-based review on GitHub Actions. Findings are checked against the source before posting to reduce unsupported comments. Shared coding standards guide implementation and review with Claude Code and Codex.",
     stack: ["GitHub Actions", "Anthropic API", "Node.js", "Cursor rules", "Claude Code", "Codex"],
     art: "pipeline",
     credit: "Internal tooling at COI Agency.",
@@ -192,7 +192,6 @@ export const projects: Project[] = [
       "Personalised AI content and a streaming chat with memory on the OpenAI API, subscriptions and one-off purchases via Gumroad webhooks, guest checkout with tokenised email delivery, Supabase with row-level security, i18n in 9 locales.",
     stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Supabase", "OpenAI API", "Gumroad", "Vercel"],
     url: "https://lunaraguide.com/?lang=en",
-    repo: "https://github.com/labranka/lunara",
     image: "/work/lunara.jpg",
   },
 ];

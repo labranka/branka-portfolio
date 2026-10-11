@@ -1,43 +1,39 @@
+import { email } from "@/content/site";
+
 export function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-5 pb-10 pt-20 text-center md:pt-28">
-      <h1 className="fade-up mx-auto max-w-4xl font-display text-[clamp(2.2rem,6vw,4.4rem)] leading-[1.12] text-ink">
-        Hi, I&apos;m Branka, a <span className="hl mark-sage" style={{ animationDelay: "0.3s" }}>senior frontend engineer</span> who
-        builds storefronts, <span className="hl mark-sky" style={{ animationDelay: "0.6s" }}>web apps</span> and{" "}
-        <span className="hl mark-sun" style={{ animationDelay: "0.9s" }}>AI tooling</span>.
+    <section className="mx-auto max-w-6xl px-5 pb-12 pt-14 text-center sm:pb-16 sm:pt-20 lg:pt-24">
+      <p className="font-mono text-xs uppercase tracking-[0.14em] text-plum">Hi, I&apos;m Branka Lakićević</p>
+      <h1 className="mx-auto mt-6 max-w-4xl font-display text-[clamp(2.6rem,5.7vw,4.6rem)] leading-[1.1] tracking-[-0.025em] text-ink">
+        Senior frontend engineer.<br />
+        <span className="hl mark-sage">Development lead.</span>
       </h1>
-
-      <svg viewBox="0 0 520 28" className="mx-auto mt-2 h-7 w-[min(520px,80%)] text-plum" fill="none" aria-hidden="true">
-        <path
-          className="draw"
-          d="M8 18 C 120 6, 260 26, 400 12 S 500 10, 512 16"
-          stroke="currentColor"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-      </svg>
-
-      <p className="fade-up delay-1 mx-auto mt-6 max-w-2xl text-lg text-body">
-        Development lead at{" "}
-        <a href="https://coiagency.com" target="_blank" rel="noopener noreferrer" className="font-medium text-ink underline decoration-plum/60 underline-offset-4 hover:decoration-plum">COI Agency</a>, a Shopify Plus agency in Zagreb, where a team of up to nine of us ships
-        20+ custom stores and apps a year. On the side I build my own products with Next.js, React, TypeScript
-        and the OpenAI API.
+      <p className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-body sm:text-lg">
+        I build storefronts, custom apps and my own products.
+        Currently leading development at{" "}
+        <a href="https://coiagency.com" target="_blank" rel="noopener noreferrer" className="text-link">COI Agency</a>, a Shopify Plus agency in Zagreb.
       </p>
-
-      <div className="fade-up delay-2 mt-8 flex flex-wrap justify-center gap-3 font-mono text-[13px]">
-        <a href="#work" className="bg-plum px-5 py-2.5 text-paper transition hover:bg-plum-deep">
-          See the work
-        </a>
-        <a href="mailto:brankarbc96@gmail.com" className="border border-rule px-5 py-2.5 text-ink transition hover:border-plum">
-          Email me
-        </a>
-        <a href="https://github.com/labranka" target="_blank" rel="noopener noreferrer" className="border border-rule px-5 py-2.5 text-ink transition hover:border-plum">
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/brankalakicevic" target="_blank" rel="noopener noreferrer" className="border border-rule px-5 py-2.5 text-ink transition hover:border-plum">
-          LinkedIn
-        </a>
+      <div className="mt-7 flex flex-wrap justify-center gap-3">
+        <a href="#work" className="button-primary">Explore my work <span aria-hidden="true">↓</span></a>
+        <a href={"mailto:" + email} className="button-secondary">Get in touch <span aria-hidden="true">↗</span></a>
       </div>
+      <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-1 font-mono text-xs text-muted">
+        <a href="https://github.com/labranka" target="_blank" rel="noopener noreferrer" className="text-link py-2">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/brankalakicevic" target="_blank" rel="noopener noreferrer" className="text-link py-2">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="/Branka-Lakicevic-CV.pdf" target="_blank" rel="noopener noreferrer" className="text-link py-2">View CV <span aria-hidden="true">↗</span></a>
+      </div>
+      <dl className="mx-auto mt-10 grid max-w-3xl grid-cols-1 border-y border-rule sm:mt-14 sm:grid-cols-3">
+        {[
+          ["Since 2023", "Development lead at COI"],
+          ["Up to 9", "Developers on the team"],
+          ["20+ a year", "Stores & apps shipped by our team"],
+        ].map(([value, label]) => (
+          <div key={label} className="hero-fact flex items-center justify-between gap-4 px-3 py-4 text-left sm:flex-col sm:gap-1 sm:py-5 sm:text-center">
+            <dt className="order-2 text-xs leading-relaxed text-muted">{label}</dt>
+            <dd className="order-1 shrink-0 font-display text-2xl text-ink sm:text-3xl">{value}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

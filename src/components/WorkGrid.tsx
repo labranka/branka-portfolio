@@ -1,16 +1,16 @@
-import { projects } from "@/content/projects";
+import { featuredProjects } from "@/content/case-studies";
 import { ProjectCard } from "./ProjectCard";
 import { SectionTitle } from "./SectionTitle";
 
 export function WorkGrid() {
-  const visible = projects.filter((p) => !p.hidden);
   return (
-    <section id="work" className="mx-auto max-w-6xl px-5 py-16">
-      <SectionTitle eyebrow="Work" title="Things I have built" />
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {visible.map((p, i) => (
-          <ProjectCard key={p.slug} project={p} index={i} />
-        ))}
+    <section id="work" className="section-shell">
+      <div className="mb-9 flex flex-wrap items-end justify-between gap-5">
+        <SectionTitle eyebrow="Selected work" title="Four projects, different challenges." />
+        <a href="#more" className="text-link mb-1 text-sm">More work <span aria-hidden="true">↓</span></a>
+      </div>
+      <div className="grid gap-x-8 gap-y-14 md:grid-cols-2 md:gap-y-16">
+        {featuredProjects.map((entry) => <ProjectCard key={entry.project.slug} {...entry} />)}
       </div>
     </section>
   );

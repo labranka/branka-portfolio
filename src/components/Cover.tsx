@@ -29,7 +29,7 @@ export function Cover({ art }: { art: Art }) {
         <rect x="264" y="62" width="24" height="8" fill="var(--color-hl-sage)" />
         <rect x="264" y="76" width="24" height="8" fill="var(--color-hl-sky)" />
         <text x="276" y="104" textAnchor="middle" fontSize="9" fill={tone.muted}>lab</text>
-        <text x="28" y="150" fontSize="11" fill={tone.ink}>upload → crop → order → process → print</text>
+        <text x="28" y="150" fontSize="10" fill={tone.ink}>upload → crop → order → process → print</text>
         <text x="28" y="168" fontSize="9" fill={tone.muted}>webhooks · BullMQ · Sharp · CSV + Drive</text>
       </Frame>
     );
@@ -48,7 +48,8 @@ export function Cover({ art }: { art: Art }) {
             <rect x={40 + i * 66} y="126" width="30" height="4" fill={tone.rule} />
           </g>
         ))}
-        <text x="32" y="168" fontSize="9" fill={tone.muted}>admin · rules · analytics · A/B tests · storefront widget</text>
+        <text x="32" y="165" fontSize="9" fill={tone.muted}>admin · rules · analytics · A/B tests</text>
+        <text x="32" y="180" fontSize="9" fill={tone.muted}>storefront widget</text>
       </Frame>
     );
   }
@@ -71,7 +72,8 @@ export function Cover({ art }: { art: Art }) {
         <text x="208" y="80" fontSize="9" fill={tone.muted}>@theme/swiper-init</text>
         <text x="208" y="94" fontSize="9" fill={tone.muted}>@theme/cart-api</text>
         <text x="208" y="120" fontSize="10" fill={tone.ink}>no bundler</text>
-        <text x="208" y="136" fontSize="9" fill={tone.muted}>ES modules + Custom Elements</text>
+        <text x="208" y="136" fontSize="9" fill={tone.muted}>ES modules</text>
+        <text x="208" y="150" fontSize="9" fill={tone.muted}>Custom Elements</text>
       </Frame>
     );
   }

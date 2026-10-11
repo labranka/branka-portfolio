@@ -5,7 +5,7 @@
   --color-card: #ffffff;
   --color-ink: #1f1a1c;
   --color-body: #3d3539;
-  --color-muted: #7a6d72;
+  --color-muted: #6d6066;
   --color-rule: #e3d7db;
   --color-plum: #64283b;
   --color-plum-deep: #4a1c2b;
@@ -16,7 +16,6 @@
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
-  --radius: 0px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,8 +24,8 @@
     --color-card: #211a1d;
     --color-ink: #f5eef0;
     --color-body: #d8cdd1;
-    --color-muted: #a3959a;
-    --color-rule: #3a2e32;
+    --color-muted: #b3a3aa;
+    --color-rule: #49383f;
     --color-plum: #e3a0b6;
     --color-plum-deep: #f0bfcd;
     --color-hl-plum: #4a2432;
@@ -36,61 +35,42 @@
   }
 }
 
-html { scroll-behavior: smooth; }
+html { color-scheme: light dark; scroll-behavior: smooth; scroll-padding-top: 7rem; }
 body { background: var(--color-paper); color: var(--color-body); }
 ::selection { background: var(--color-hl-plum); color: var(--color-ink); }
-* { border-radius: 0 !important; }
+:focus-visible { outline: 2px solid var(--color-plum); outline-offset: 5px; }
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
 
-/* Marker highlight that draws itself in */
-.hl {
-  --mark: var(--color-hl-plum);
-  padding: 0.05em 0.28em;
-  color: var(--color-ink);
-  background-image: linear-gradient(var(--mark), var(--mark));
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  animation: mark 0.55s ease-out forwards;
+.section-shell { max-width: 72rem; margin-inline: auto; padding: 3rem 1.25rem; }
+.text-link { color: var(--color-plum); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--color-plum) 45%, transparent); text-underline-offset: 4px; }
+.text-link:hover { text-decoration-color: currentColor; }
+.button-primary, .button-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 1.25rem;
+  min-height: 48px; padding: .75rem 1.25rem; font-family: var(--font-mono);
+  font-size: 13px; line-height: 1.5; border: 1px solid var(--color-plum);
+  transition: background-color .18s ease, border-color .18s ease;
 }
+.button-primary { background: var(--color-plum); color: var(--color-paper); }
+.button-primary:hover { background: var(--color-plum-deep); border-color: var(--color-plum-deep); }
+.button-secondary { color: var(--color-plum); border-color: var(--color-rule); }
+.button-secondary:hover { border-color: var(--color-plum); background: var(--color-hl-plum); }
+.hl { --mark: var(--color-hl-plum); padding: .02em .15em .08em; color: var(--color-ink); background: var(--mark); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .mark-sage { --mark: var(--color-hl-sage); }
 .mark-sky { --mark: var(--color-hl-sky); }
 .mark-sun { --mark: var(--color-hl-sun); }
-.mark-plum { --mark: var(--color-hl-plum); }
-.hl-static { background-size: 100% 100%; animation: none; }
-@keyframes mark { to { background-size: 100% 100%; } }
-
-@keyframes fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-@keyframes draw { to { stroke-dashoffset: 0; } }
-@keyframes dash { to { stroke-dashoffset: -40; } }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.fade-up { animation: fade-up 0.6s ease-out both; }
-.delay-1 { animation-delay: 0.15s; }
-.delay-2 { animation-delay: 0.3s; }
-.delay-3 { animation-delay: 0.45s; }
-.draw { stroke-dasharray: 620; stroke-dashoffset: 620; animation: draw 0.9s ease-in-out 0.45s forwards; }
-.dash { stroke-dasharray: 6 6; animation: dash 1.6s linear infinite; }
-.float { animation: float 4s ease-in-out infinite; }
-.marquee { animation: marquee 40s linear infinite; }
-.marquee:hover { animation-play-state: paused; }
-
-/* Custom cursor: only for fine pointers */
-@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  body, a, button, [data-cursor] { cursor: none; }
+.archive-marker::before { content: "+"; }
+details[open] > summary .archive-marker::before { content: "−"; }
+.archive-project[open] { background: color-mix(in srgb, var(--color-hl-plum) 20%, transparent); }
+.skip-link { position: fixed; top: .5rem; left: 1rem; z-index: 50; transform: translateY(-200%); padding: .8rem 1rem; background: var(--color-plum); color: var(--color-paper); }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 639px) { .hero-fact + .hero-fact { border-top: 1px solid var(--color-rule); } }
+@media (min-width: 640px) { .section-shell { padding-block: 4rem; } }
+@media (prefers-reduced-motion: no-preference) {
+  .project-image-link img { transition: transform .35s ease; }
+  .project-image-link:hover img { transform: scale(1.015); }
 }
-.cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 60; mix-blend-mode: difference; }
-.cursor-dot { width: 8px; height: 8px; margin: -4px 0 0 -4px; background: #fff; }
-.cursor-ring {
-  width: 36px; height: 36px; margin: -18px 0 0 -18px; border: 1.5px solid #fff;
-  display: grid; place-items: center; font: 600 11px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: #fff;
-  transition: width 0.25s ease, height 0.25s ease, margin 0.25s ease, background-color 0.25s ease;
-}
-.cursor-ring.is-hover { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: #fff; color: #000; border-color: transparent; mix-blend-mode: difference; }
-@media (pointer: coarse), (prefers-reduced-motion: reduce) { .cursor-dot, .cursor-ring { display: none; } }
-
 @media (prefers-reduced-motion: reduce) {
-  .fade-up, .hl, .float, .marquee, .dash { animation: none; }
-  .hl { background-size: 100% 100%; }
-  .draw { animation: none; stroke-dashoffset: 0; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }

@@ -10,11 +10,11 @@ const links = [
 export function Nav() {
   return (
     <header className="sticky top-0 z-20 border-b border-rule bg-paper/85 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-3">
         <Link href="/" className="font-mono text-sm font-semibold tracking-tight text-plum">
           branka.lakicevic
         </Link>
-        <nav className="flex gap-5 font-mono text-[12px] uppercase tracking-[0.12em] text-muted">
+        <nav className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[12px] uppercase tracking-[0.12em] text-muted">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="transition hover:text-ink">
               {l.label}

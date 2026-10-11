@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import type { Project } from "@/content/projects";
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -12,13 +9,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
     .toUpperCase();
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: Math.min(index * 0.06, 0.3) }}
-      whileHover={{ y: -4 }}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-rule bg-card"
+    <article
+      className="group fade-up flex flex-col overflow-hidden rounded-2xl border border-rule bg-card transition-transform duration-300 hover:-translate-y-1"
+      style={{ animationDelay: `${Math.min(index * 70, 350)}ms` }}
     >
       <div className="relative aspect-[16/10] overflow-hidden border-b border-rule bg-hl-plum">
         {project.image ? (
@@ -65,6 +58,6 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         )}
         {project.credit && <p className="text-[12px] text-muted">{project.credit}</p>}
       </div>
-    </motion.article>
+    </article>
   );
 }

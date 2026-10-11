@@ -115,6 +115,19 @@ export const projects: Project[] = [
     credit: coi,
   },
   {
+    // happy-day: 354 commits attributed on GitHub; Branka built the whole frontend
+    slug: "happy-day",
+    title: "Happy Day",
+    kind: "Shopify storefront",
+    role: "Built the whole frontend",
+    year: "2025",
+    summary: "Complete storefront frontend built to supplied designs. TODO: add one or two specifics (sections, cart, performance).",
+    stack: ["Shopify", "Liquid", "JavaScript", "Web Components"],
+    url: "https://happy-day.com/",
+    image: "/work/happy-day.jpg",
+    credit: coi,
+  },
+  {
     slug: "vibe-search",
     title: "VIBE Search",
     kind: "AI product search app for Shopify · in progress",

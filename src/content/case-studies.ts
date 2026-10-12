@@ -13,22 +13,9 @@ type CaseStudy = {
 // Add measured outcomes only when they can be verified.
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "wall-of-art",
-    label: "Custom Shopify storefront",
-    summary: "A storefront that connects posters, matching frames and availability in one shopping flow.",
-    stack: ["Shopify", "Liquid", "JavaScript", "Web Components"],
-    context: "Wall of Art sells posters and frames. The storefront needed to connect the two, check availability and keep related items together in the cart, while following the supplied design.",
-    implementation: [
-      { title: "Matching products", text: "Built poster and frame matching with availability checks, so the selection flow accounts for the products that can actually be purchased together." },
-      { title: "A connected cart", text: "Implemented grouped cart items with the Shopify Ajax Cart API, keeping the relationship between a poster and its frame visible in the shopping flow." },
-      { title: "Picking up where you left off", text: "Added saved favourites and recently viewed products. Built most of the storefront as lead developer, working with the COI Agency team and supplied designs." },
-    ],
-    delivered: "A custom storefront with connected product selection, grouped cart items and features that help shoppers return to products they have already discovered.",
-  },
-  {
     slug: "printworks-platform",
     label: "Photo-printing platform",
-    summary: "From an in-browser photo editor to queued image processing and a handoff to the print lab.",
+    summary: "A complete photo-printing app: browser editor, backend image processing, order automation and print-lab delivery.",
     stack: ["Node.js", "BullMQ", "Sharp", "Fabric.js"],
     context: "The PRINTWORKS photo-printing flow connects what a customer creates in the browser with the files and order information needed by the print lab.",
     implementation: [
@@ -37,6 +24,19 @@ export const caseStudies: CaseStudy[] = [
       { title: "Prepare production files", text: "Automated the handoff to the print lab through Google Drive and daily production CSVs, connecting storefront orders to the production workflow." },
     ],
     delivered: "A connected flow from photo upload and editing through order processing to production files for the print lab. Built as lead developer at COI Agency with the team.",
+  },
+  {
+    slug: "lunara",
+    label: "Independent product",
+    summary: "An AI web app designed, built and run solo, with streaming chat, payments and personalised content.",
+    stack: ["Next.js", "TypeScript", "Supabase", "OpenAI API"],
+    context: "Lunara is my own web app for astrology, tarot and personal reflection. I own the product from its interface and application code to payments and deployment.",
+    implementation: [
+      { title: "Build the product", text: "Designed and built the application in Next.js, React and TypeScript, with personalised AI content and a streaming chat with memory on the OpenAI API." },
+      { title: "Connect purchases to access", text: "Integrated subscriptions and one-off purchases through Gumroad webhooks, including guest checkout with tokenised email delivery." },
+      { title: "Support accounts and languages", text: "Used Supabase with row-level security for application data and built the localisation structure for nine locales. English and Serbian are the polished locales." },
+    ],
+    delivered: "A live, independently built product with personalised content, streaming chat, accounts and paid access, deployed on Vercel.",
   },
   {
     slug: "ivon",
@@ -52,17 +52,17 @@ export const caseStudies: CaseStudy[] = [
     delivered: "A storefront and supporting apps that connect customer orders, backorder information and ERP invoice data, with a dedicated QA and release setup.",
   },
   {
-    slug: "lunara",
-    label: "Independent product",
-    summary: "An AI web app designed, built and run solo, with streaming chat, payments and personalised content.",
-    stack: ["Next.js", "TypeScript", "Supabase", "OpenAI API"],
-    context: "Lunara is my own web app for astrology, tarot and personal reflection. I own the product from its interface and application code to payments and deployment.",
+    slug: "wall-of-art",
+    label: "Custom Shopify storefront",
+    summary: "A storefront that connects posters, matching frames and availability in one shopping flow.",
+    stack: ["Shopify", "Liquid", "JavaScript", "Web Components"],
+    context: "Wall of Art sells posters and frames. The storefront needed to connect the two, check availability and keep related items together in the cart, while following the supplied design.",
     implementation: [
-      { title: "Build the product", text: "Designed and built the application in Next.js, React and TypeScript, with personalised AI content and a streaming chat with memory on the OpenAI API." },
-      { title: "Connect purchases to access", text: "Integrated subscriptions and one-off purchases through Gumroad webhooks, including guest checkout with tokenised email delivery." },
-      { title: "Support accounts and languages", text: "Used Supabase with row-level security for application data and built the localisation structure for nine locales. English and Serbian are the polished locales." },
+      { title: "Matching products", text: "Built poster and frame matching with availability checks, so the selection flow accounts for the products that can actually be purchased together." },
+      { title: "A connected cart", text: "Implemented grouped cart items with the Shopify Ajax Cart API, keeping the relationship between a poster and its frame visible in the shopping flow." },
+      { title: "Picking up where you left off", text: "Added saved favourites and recently viewed products. Built most of the storefront as lead developer, working with the COI Agency team and supplied designs." },
     ],
-    delivered: "A live, independently built product with personalised content, streaming chat, accounts and paid access, deployed on Vercel.",
+    delivered: "A custom storefront with connected product selection, grouped cart items and features that help shoppers return to products they have already discovered.",
   },
 ];
 

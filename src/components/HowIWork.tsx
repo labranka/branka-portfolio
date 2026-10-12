@@ -1,9 +1,9 @@
 import { SectionTitle } from "./SectionTitle";
 
 const principles = [
-  { title: "Choose the right foundations", text: "Custom storefronts in Liquid and Web Components. Applications in React and Next.js. I choose the approach around the product, with performance and accessibility built into the work.", tone: "mark-sky" },
-  { title: "Build beyond the interface", text: "I connect storefronts to the systems behind them: custom Shopify apps, ERP data, payments, search and email. Webhooks, queues and background jobs get the same attention as the frontend.", tone: "mark-sage" },
-  { title: "Make quality a team habit", text: "I stay hands-on while leading developers, onboarding people and setting shared standards. Tests in CI and AI-assisted reviews support the work, with review findings checked against the source.", tone: "mark-sun" },
+  { title: "Build the complete application", text: "Interfaces, APIs, databases and background jobs. I connect the pieces into working products, from photo-processing pipelines and ERP integrations to payments, accounts and deployment.", tone: "mark-sky" },
+  { title: "Advanced AI-assisted engineering", text: "Over the past year, I have built advanced workflows with Claude Code, Codex and Cursor, from planning and implementation to code review. I use coding agents, shared rules and automated PR reviews, checking the output against the source and verifying changes with tests.", tone: "mark-sage" },
+  { title: "Lead the work, stay hands-on", text: "I follow developments in AI tooling, evaluate new tools and techniques, and introduce useful practices across the team. I lead and onboard developers, maintain shared standards and stay hands-on with architecture, implementation and delivery.", tone: "mark-sun" },
 ];
 
 export function HowIWork() {

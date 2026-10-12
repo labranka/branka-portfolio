@@ -1,4 +1,4 @@
 export const siteUrl = "https://branka-portfolio.vercel.app";
-export const siteTitle = "Branka Lakićević · Senior Frontend Engineer";
-export const siteDescription = "Senior frontend engineer and development lead based in Zagreb. Selected Shopify storefronts, custom apps and independently built products.";
+export const siteTitle = "Branka Lakićević · Software Engineer & Development Lead";
+export const siteDescription = "Software engineer and development lead in Zagreb. Full-stack apps, advanced AI-assisted engineering, coding agents and team adoption of new tools and practices.";
 export const email = "brankarbc96@gmail.com";

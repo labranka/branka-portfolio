@@ -15,7 +15,7 @@ export function ProjectCard({ project, story }: (typeof featuredProjects)[number
           <span>{story.label}</span><span>{project.year}</span>
         </div>
         <h3 className="font-display text-3xl leading-tight text-ink">
-          <Link href={href} className="transition-colors hover:text-plum">{project.slug === "printworks-platform" ? "PRINTWORKS" : project.title}</Link>
+          <Link href={href} className="transition-colors hover:text-plum">{project.slug === "printworks-platform" ? "PRINTWORKS photo printer" : project.title}</Link>
         </h3>
         <p className="mt-3 max-w-lg text-base leading-relaxed text-body">{story.summary}</p>
         <p className="mt-3 text-sm text-plum">{project.role}</p>

@@ -4,14 +4,17 @@ export function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-5 pb-12 pt-14 text-center sm:pb-16 sm:pt-20 lg:pt-24">
       <p className="font-mono text-xs uppercase tracking-[0.14em] text-plum">Hi, I&apos;m Branka Lakićević</p>
-      <h1 className="mx-auto mt-6 max-w-4xl font-display text-[clamp(2.6rem,5.7vw,4.6rem)] leading-[1.1] tracking-[-0.025em] text-ink">
-        Senior frontend engineer.<br />
+      <h1 className="mx-auto mt-6 max-w-4xl font-display text-[clamp(2rem,5.7vw,4.6rem)] leading-[1.1] tracking-[-0.025em] text-ink">
+        Software engineer.<br />
         <span className="hl mark-sage">Development lead.</span>
       </h1>
-      <p className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-body sm:text-lg">
-        I build storefronts, custom apps and my own products.
-        Currently leading development at{" "}
-        <a href="https://coiagency.com" target="_blank" rel="noopener noreferrer" className="text-link">COI Agency</a>, a Shopify Plus agency in Zagreb.
+      <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
+        I build full-stack web apps, e-commerce platforms and integrations, using{" "}
+        <span className="font-medium text-plum">advanced AI-assisted workflows</span>{" "}
+        from planning and implementation to code review.
+      </p>
+      <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted">
+        Currently leading development at <a href="https://coiagency.com" target="_blank" rel="noopener noreferrer" className="text-link">COI Agency</a> in Zagreb.
       </p>
       <div className="mt-7 flex flex-wrap justify-center gap-3">
         <a href="#work" className="button-primary">Explore my work <span aria-hidden="true">↓</span></a>

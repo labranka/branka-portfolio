@@ -1,5 +1,3 @@
-import { email } from "@/content/site";
-
 export function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-5 pb-12 pt-14 text-center sm:pb-16 sm:pt-20 lg:pt-24">
@@ -18,7 +16,7 @@ export function Hero() {
       </p>
       <div className="mt-7 flex flex-wrap justify-center gap-3">
         <a href="#work" className="button-primary">Explore my work <span aria-hidden="true">↓</span></a>
-        <a href={"mailto:" + email} className="button-secondary">Get in touch <span aria-hidden="true">↗</span></a>
+        <a href="#contact" className="button-secondary">Get in touch <span aria-hidden="true">↓</span></a>
       </div>
       <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-1 font-mono text-xs text-muted">
         <a href="https://github.com/labranka" target="_blank" rel="noopener noreferrer" className="text-link py-2">GitHub <span aria-hidden="true">↗</span></a>

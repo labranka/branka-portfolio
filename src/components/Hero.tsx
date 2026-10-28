@@ -21,7 +21,6 @@ export function Hero() {
       <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-1 font-mono text-xs text-muted">
         <a href="https://github.com/labranka" target="_blank" rel="noopener noreferrer" className="text-link py-2">GitHub <span aria-hidden="true">↗</span></a>
         <a href="https://www.linkedin.com/in/brankalakicevic" target="_blank" rel="noopener noreferrer" className="text-link py-2">LinkedIn <span aria-hidden="true">↗</span></a>
-        <a href="/Branka-Lakicevic-CV.pdf" target="_blank" rel="noopener noreferrer" className="text-link py-2">View CV <span aria-hidden="true">↗</span></a>
       </div>
       <dl className="mx-auto mt-10 grid max-w-3xl grid-cols-1 border-y border-rule sm:mt-14 sm:grid-cols-3">
         {[

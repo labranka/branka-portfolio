@@ -9,7 +9,6 @@ export function Contact() {
             <p className="mt-4 max-w-lg text-base leading-relaxed">Open to software engineering, full-stack development and technical leadership opportunities in Zagreb, Belgrade or remotely.</p>
             <a href="https://www.linkedin.com/in/brankalakicevic" target="_blank" rel="noopener noreferrer" className="text-link mt-5 inline-block text-base">Message me on LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
-          <a href="/Branka-Lakicevic-CV.pdf" target="_blank" rel="noopener noreferrer" className="button-primary justify-self-start">View my CV <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>

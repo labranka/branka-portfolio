@@ -185,11 +185,11 @@ export const projects: Project[] = [
   {
     slug: "lunara",
     title: "Lunara",
-    kind: "AI web app, built solo",
+    kind: "Personal AI web app, built for fun",
     role: "Designed, built and run end to end",
     year: "2026",
     summary:
-      "Personalised AI content and a streaming chat with memory on the OpenAI API, subscriptions and one-off purchases via Gumroad webhooks, guest checkout with tokenised email delivery, Supabase with row-level security, i18n in 9 locales.",
+      "A personal project I built for fun in my spare time. Personalised AI content and a streaming chat with memory on the OpenAI API, subscriptions and one-off purchases via Gumroad webhooks, guest checkout with tokenised email delivery, Supabase with row-level security, i18n in 9 locales.",
     stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Supabase", "OpenAI API", "Gumroad", "Vercel"],
     url: "https://lunaraguide.com/?lang=en",
     image: "/work/lunara.jpg",

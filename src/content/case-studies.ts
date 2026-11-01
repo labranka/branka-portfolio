@@ -27,16 +27,16 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "lunara",
-    label: "Independent product",
-    summary: "An AI web app designed, built and run solo, with streaming chat, payments and personalised content.",
+    label: "Personal project, built for fun",
+    summary: "An AI web app I built for fun in my spare time, with streaming chat, payments and personalised content.",
     stack: ["Next.js", "TypeScript", "Supabase", "OpenAI API"],
-    context: "Lunara is my own web app for astrology, tarot and personal reflection. I own the product from its interface and application code to payments and deployment.",
+    context: "Lunara is a personal project I built for fun in my spare time, exploring astrology, tarot and personal reflection. I designed and built it end to end, from the interface and application code to payments and deployment.",
     implementation: [
       { title: "Build the product", text: "Designed and built the application in Next.js, React and TypeScript, with personalised AI content and a streaming chat with memory on the OpenAI API." },
       { title: "Connect purchases to access", text: "Integrated subscriptions and one-off purchases through Gumroad webhooks, including guest checkout with tokenised email delivery." },
       { title: "Support accounts and languages", text: "Used Supabase with row-level security for application data and built the localisation structure for nine locales. English and Serbian are the polished locales." },
     ],
-    delivered: "A live, independently built product with personalised content, streaming chat, accounts and paid access, deployed on Vercel.",
+    delivered: "A live personal project with personalised content, streaming chat, accounts and paid access, deployed on Vercel.",
   },
   {
     slug: "ivon",

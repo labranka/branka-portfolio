@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: siteTitle, template: "%s · Branka Lakićević" },
   description: siteDescription,
+  verification: { google: "H2t0Irryw5oRqdzUR8vKqCNrwq0H6z7pLLI_r1LukX8" },
   alternates: { canonical: "/" },
   openGraph: { title: siteTitle, description: siteDescription, url: "/", siteName: "Branka Lakićević", type: "website", locale: "en_GB" },
   twitter: { card: "summary_large_image", title: siteTitle, description: siteDescription, images: ["/opengraph-image"] },
